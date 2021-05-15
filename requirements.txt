@@ -1,0 +1,7 @@
+discord.py
+pynacl
+youtube_dl
+aiohttp
+websockets
+oauth2client
+gspread
