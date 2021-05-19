@@ -278,39 +278,6 @@ async def on_message(message):
       if text[1] == ('coc'):
         statusNameList = 'STR,CON,POW,DEX,APP,SIZ,INT,EDU'
         await statusCreate(message,'3d6,3d6,3d6,3d6,3d6,2d6+6,2d6+6,3d6+3', statusNameList)
-      if text[1] == ('sw'):
-        if len(text) < 3:
-          text.append('人間')
-        statusNameList = 'A,B,C,D,E,F'
-        if text[2] == ('adventurer'):
-          await message.channel.send(message.author.mention)
-          await result(message.channel, '2d6', '技')
-          await result(message.channel, '2d6', '力')
-          await result(message.channel, '2d6', '心')
-        if text[2] == ('human') or text[2] == ('人間'):
-          await statusCreate(message,'2d6,2d6,2d6,2d6,2d6,2d6', statusNameList)
-        if text[2] == ('elf') or text[2] == ('エルフ'):
-          await statusCreate(message,'2d6,2d6,1d6,2d6,2d6,2d6', statusNameList)
-        if text[2] == ('dwarf') or text[2] == ('ドワーフ'):
-          await statusCreate(message,'2d6+6,1d6,2d6,2d6,1d6,2d6+6', statusNameList)
-        if text[2] == ('tabit') or text[2] == ('タビット'):
-          await statusCreate(message,'1d6,1d6,1d6,2d6,2d6+6,2d6', statusNameList)
-        if text[2] == ('runesfork') or text[2] == ('ルーンフォーク'):
-          await statusCreate(message,'2d6,1d6,2d6,2d6,2d6,1d6', statusNameList)
-        if text[2] == ('nightmare') or text[2] == ('ナイトメア'):
-          await statusCreate(message,'2d6,2d6,1d6,1d6,2d6,2d6', statusNameList)
-        if text[2] == ('recanto') or text[2] == ('リカント'):
-          await statusCreate(message,'1d6,1d6+3,2d6,2d6,1d6+6,1d6', statusNameList)
-        if text[2] == ('lildraken') or text[2] == ('リルドラケン'):
-          await statusCreate(message,'1d6,2d6,2d6,2d6+6,1d6,2d6', statusNameList)
-        if text[2] == ('grassrunner') or text[2] == ('グラスランナー'):
-          await statusCreate(message,'2d6,2d6,1d6,2d6+6,1d6,2d6+6', statusNameList)
-        if text[2] == ('melia') or text[2] == ('メリア'):
-          await statusCreate(message,'1d6,1d6,1d6,2d6+6,1d6,1d6', statusNameList)
-        if text[2] == ('dience') or text[2] == ('ディエンス'):
-          await statusCreate(message,'2d6,2d6,1d6,1d6+3,2d6,2d6+3', statusNameList)
-        if text[2] == ('leprechaun') or text[2] == ('レプラカーン'):
-          await statusCreate(message,'2d6,1d6,2d6,2d6,2d6,2d6', statusNameList)
       return
 
   # 通常ダイスボット シークレットダイス付き
